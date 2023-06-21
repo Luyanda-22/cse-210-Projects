@@ -1,11 +1,17 @@
 public class Entry
 {
-    public string _date;
-    public string _question;
-    public string _userEntry;
+    public string date, question, userEntry;
+    
+    public Entry (string _date, string _question, string _userEntry)
+    {
+        date        =  _date;
+        question    =  _question;
+        userEntry   =  _userEntry;
+    }
 
     public void Display()
     {
-        
+        Console.WriteLine($"Date: {date} - Prompt: {question}");
+        Console.WriteLine(userEntry);
     }
 }
