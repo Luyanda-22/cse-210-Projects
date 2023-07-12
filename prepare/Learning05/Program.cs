@@ -3,7 +3,26 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Learning05 World!");
+    {     
+        List<Shape> shapes = new List<Shape>(); //This list holds the different shapes.
+
+        // Creating instances for the shapes
+        Square square = new Square("Red", 5.0);
+        Rectangle rectangle = new Rectangle("Blue", 3.0, 4.0);
+        Circle circle = new Circle("Green", 2.0);
+
+        // Adding them to Shapes list
+        shapes.Add(square);
+        shapes.Add(rectangle);
+        shapes.Add(circle);
+
+        // Iterating through each shape in the 'shapes' list
+        foreach (Shape shape in shapes)
+        {
+            Console.WriteLine("Color: " + shape.Color);
+            Console.WriteLine("Area: " + shape.GetArea().ToString("F2")); // The .ToString method shortens up the number and only shows two digits after the decimal.
+            Console.WriteLine();
+        }    
     }
+
 }
