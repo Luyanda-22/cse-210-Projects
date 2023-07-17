@@ -1,0 +1,3 @@
+clean,Simple,50,False
+shopping,Simple,10,True
+go to temple,Eternal,20,False
